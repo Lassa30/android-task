@@ -75,9 +75,9 @@ class AppDetailFragment : Fragment() {
     private fun setupButtons() {
         binding.installButton.setOnClickListener {
             if (viewModel.app.value?.isInstalled == true) {
-                viewModel.uninstallApp()
+                viewModel.uninstallApp(requireContext())
             } else {
-                viewModel.installApp()
+                viewModel.installApp(requireContext())
             }
         }
     }
